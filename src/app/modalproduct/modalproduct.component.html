@@ -1,0 +1,15 @@
+<h1 mat-dialog-title>{{title}}</h1>
+<div mat-dialog-content>
+  <p>Human's Name</p>
+  <mat-form-field>
+    <input matInput [(ngModel)]="modalData.name">
+  </mat-form-field>
+  <p>Human`s City</p>
+  <mat-form-field>
+    <input matInput [(ngModel)]="modalData.value">
+  </mat-form-field>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">Cancel</button>
+  <button mat-button [mat-dialog-close]="modalData" cdkFocusInitial>{{title}}</button>
+</div>
