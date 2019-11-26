@@ -9,12 +9,12 @@ import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 export class ModalproductComponent {
 
   public modalData = { name: null, value: null, type: 'insert' }
-  public title = 'Criar';
+  public title = 'Add';
   constructor(
     public dialogRef: MatDialogRef<ModalproductComponent>,
     @Inject(MAT_DIALOG_DATA) public data: any) {
     Object.assign(this.modalData, data);
-    this.title = (this.modalData.type == 'insert') ? 'Update' : 'Update';
+    this.title = (this.modalData.type == 'insert') ? 'Add' : 'Update';
   }
 
   onNoClick(): void {
